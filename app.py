@@ -6,9 +6,8 @@ Rodar com: streamlit run app.py
 import streamlit as st
 import db
 from personas import SCENARIOS
-from claude_client import get_client_reply, get_feedback
-
 import claude_client
+from claude_client import get_client_reply, get_feedback
 
 if not claude_client.has_api_key():
     st.error(
