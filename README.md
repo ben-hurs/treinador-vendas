@@ -7,11 +7,11 @@ feedback no final. Tudo em Python + SQLite, pra rodar 100% na sua máquina.
 
 ```
 sales_trainer_local/
-├── app.py             # app principal (Streamlit) — a interface
-├── db.py               # todo o acesso ao banco (SQLite)
-├── claude_client.py     # chamadas pra API da Anthropic
-├── personas.py           # perfis de cliente (edite aqui pra adicionar novos)
-├── schema.sql             # estrutura das tabelas
+├── app.py             
+├── db.py               
+├── claude_client.py     
+├── personas.py           
+├── schema.sql             
 ├── requirements.txt
 └── .env.example
 ```

@@ -8,6 +8,16 @@ import db
 from personas import SCENARIOS
 from claude_client import get_client_reply, get_feedback
 
+import claude_client
+
+if not claude_client.has_api_key():
+    st.error(
+        "⚠️ A chave ANTHROPIC_API_KEY não foi encontrada. "
+        "Se você é o administrador do app: confira Settings → Secrets "
+        "no Streamlit Cloud e reinicie o app (Reboot app)."
+    )
+    st.stop()
+
 st.set_page_config(page_title="Treino de Vendas", page_icon="🤝", layout="centered")
 
 # --- setup do banco (roda uma vez, é idempotente) ---
